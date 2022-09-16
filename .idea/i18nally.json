@@ -1,0 +1,86 @@
+{
+  "version" : "1.2",
+  "profiles" : [ {
+    "id" : "bf055171-61ab-4a98-b4b2-7a7af2b423d5",
+    "name" : "Laravel (PHP, BLADE)",
+    "keyNamingPattern" : "SNAKE_CASE_PATTERN",
+    "sink" : {
+      "id" : "90093366-5b60-4f94-bc76-18cf24c8786b",
+      "type" : "namespaced",
+      "translationsDirectory" : "$PROJECT_DIR$/blog/resources/lang",
+      "fileType" : "php",
+      "defaultLocale" : "en",
+      "namespaces" : [ "auth", "pagination", "passwords", "validation" ],
+      "outputFilenameTemplate" : "%locale%/%namespace%.php",
+      "nestingType" : "DOT",
+      "placeholderFormatterName" : "LARAVEL"
+    },
+    "sources" : [ {
+      "id" : "067abf50-046c-404f-a859-0e3d6a0c05bb",
+      "type" : "php",
+      "scopeName" : "i18n Ally: Laravel/PHP source",
+      "scopePattern" : "file[Crud_by_modal]:blog/app//*&&!file[Crud_by_modal]:blog/app/Broadcasting//*&&!file[Crud_by_modal]:blog/app/Console//*&&!file[Crud_by_modal]:blog/app/Events//*&&!file[Crud_by_modal]:blog/app/Exceptions//*&&!file[Crud_by_modal]:blog/app/Models//*&&!file[Crud_by_modal]:blog/app/Providers//*",
+      "defaultReplacementTemplate" : "trans('%namespace%.%key%', %map%)",
+      "recognizedReplacementTemplates" : [ ],
+      "skipDefaultNamespace" : false,
+      "sprintfMode" : false
+    }, {
+      "id" : "8631cfa7-4e4a-4a80-badd-f150b087b522",
+      "type" : "blade",
+      "scopeName" : "i18n Ally: Laravel/Blade templates",
+      "scopePattern" : "file[Crud_by_modal]:blog/resources/views//*",
+      "defaultReplacementTemplate" : "trans('%namespace%.%key%', %map%)",
+      "attributeReplacementTemplate" : "",
+      "inlineTagsReplacementTemplate" : "",
+      "recognizedReplacementTemplates" : [ ],
+      "inlineTagNames" : [ "a", "abbr", "acronym", "b", "bdi", "bdo", "big", "br", "cite", "code", "data", "del", "dfn", "em", "i", "img", "input", "ins", "kbd", "label", "mark", "meter", "output", "progress", "q", "ruby", "s", "samp", "slot", "small", "span", "strong", "sub", "sup", "time", "u", "tt", "var", "wbr" ],
+      "translatableAttributeNames" : [ "title", "alt", "placeholder", "label", "aria-label" ],
+      "skipDefaultNamespace" : false
+    } ]
+  }, {
+    "id" : "5137c62b-7372-49e3-9fab-6e2f6b858c39",
+    "name" : "Symfony (PHP, TWIG)",
+    "keyNamingPattern" : "SNAKE_CASE_PATTERN",
+    "sink" : {
+      "id" : "a3f01d99-aec8-43e1-b6f8-94ccbcb16d4c",
+      "type" : "namespaced",
+      "translationsDirectory" : "$PROJECT_DIR$/blog/resources/lang",
+      "fileType" : "php",
+      "defaultLocale" : "en",
+      "namespaces" : [ "auth", "pagination", "passwords", "validation" ],
+      "outputFilenameTemplate" : "%locale%/%namespace%.php",
+      "nestingType" : "DOT",
+      "placeholderFormatterName" : "SYMFONY_REPLACEMENT"
+    },
+    "sources" : [ {
+      "id" : "0280610f-18d1-402f-9f5c-e885e70ac40f",
+      "type" : "php",
+      "scopeName" : "i18n Ally: Symfony/PHP source",
+      "scopePattern" : "file[Crud_by_modal]:blog/src//*&&!file[Crud_by_modal]:blog/src/DataFixtures//*",
+      "defaultReplacementTemplate" : "$this->translator->trans('%key%', %map%, '%namespace%')",
+      "recognizedReplacementTemplates" : [ ],
+      "skipDefaultNamespace" : true,
+      "sprintfMode" : false
+    }, {
+      "id" : "4db6092f-c07e-4918-9d8f-91234bb8ff63",
+      "type" : "twig",
+      "scopeName" : "i18n Ally: Symfony/Twig templates",
+      "scopePattern" : "file[Crud_by_modal]:blog/templates//*",
+      "defaultReplacementTemplate" : "trans(%map%, '%namespace%')",
+      "attributeReplacementTemplate" : "",
+      "inlineTagsReplacementTemplate" : "trans(%map%, '%namespace%')|raw",
+      "recognizedReplacementTemplates" : [ ],
+      "inlineTagNames" : [ "a", "abbr", "acronym", "b", "bdi", "bdo", "big", "br", "cite", "code", "data", "del", "dfn", "em", "i", "img", "input", "ins", "kbd", "label", "mark", "meter", "output", "progress", "q", "ruby", "s", "samp", "slot", "small", "span", "strong", "sub", "sup", "time", "u", "tt", "var", "wbr" ],
+      "translatableAttributeNames" : [ "title", "alt", "placeholder", "label", "aria-label" ],
+      "skipDefaultNamespace" : true
+    } ]
+  } ],
+  "ignores" : {
+    "valuesInProject" : [ "use strict", "A simple primary alert with <a href=\"#\" class=\"alert-link\">an example link</a>. Give it a click if you like." ],
+    "valuesInFile" : { },
+    "filesInProject" : [ ],
+    "unignoredFunctionNames" : [ ],
+    "unignoredFunctionArguments" : { },
+    "ignoredArrayKeys" : [ "template", "date", "dateFormat", "el", "query", "type", "sql", "layout", "component", "condition", "name", "selector", "id", "class", "key", "middleware" ]
+  }
+}
