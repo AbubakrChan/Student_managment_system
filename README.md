@@ -1,3 +1,3 @@
 # Student_managment_system
 This includes students registration along with there photos and auto incrementing roll no.
-Laravel PHP
+<p>Laravel PHP<p>
